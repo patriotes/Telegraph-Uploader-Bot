@@ -6,9 +6,9 @@ from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton
 
 Bot = Client(
     "Telegraph Uploader Bot",
-    bot_token=os.environ.get("BOT_TOKEN"),
-    api_id=int(os.environ.get("API_ID")),
-    api_hash=os.environ.get("API_HASH")
+    bot_token=os.environ.get("6656700726:AAEoOOg909EQe6hdf6aEx7SmAmpu1vPKHqg"),
+    api_id=int(os.environ.get("24628161")),
+    api_hash=os.environ.get("a087186244724a76ec4b4a1777710ff6")
 )
 
 DOWNLOAD_LOCATION = os.environ.get("DOWNLOAD_LOCATION", "./DOWNLOADS/")
