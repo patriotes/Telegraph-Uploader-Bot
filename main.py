@@ -1,14 +1,14 @@
 import os
 from telegraph import upload_file
 from pyrogram import Client, filters
-from pyrogram.types import InneKeyboardMarkup, InlineKeyboardButton
+from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton
 
 
 Bot = Client(
     "Telegraph Uploader Bot",
-    bot_token=os.environ.get("BOT_TOKEN","6250957785:AAGC5fxr68r1exGAFlRdSsVftyQjCqS2XUQ")
-    api_id=int(os.environ.get("API_ID","29984735"))
-    api_hash=os.environ.get("API_HASH","c1348b9503c3f869233ae6405e0e0cd8")
+    bot_token=os.environ.get("BOT_TOKEN"),
+    api_id=int(os.environ.get("API_ID")),
+    api_hash=os.environ.get("API_HASH")
 )
 
 DOWNLOAD_LOCATION = os.environ.get("DOWNLOAD_LOCATION", "./DOWNLOADS/")
