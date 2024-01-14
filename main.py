@@ -13,10 +13,10 @@ Bot = Client(
 
 DOWNLOAD_LOCATION = os.environ.get("DOWNLOAD_LOCATION", "./DOWNLOADS/")
 
-START_TEXT = """Hello {},
-I am an under 5MB media or file to telegra.ph link uploader bot.
+START_TEXT = """Bonjour {},
+Je suis un Bot ou vous pouvez envoyer un média ou un fichier de moins de 5 Mo vers le robot de téléchargement de liens telegra.p.
 
-Made by @FayasNoushad"""
+Made by @Architecte_Q"""
 
 HELP_TEXT = """**About Me**
 
