@@ -80,7 +80,7 @@ async def cb_data(bot, update):
             disable_web_page_preview=True,
             reply_markup=START_BUTTONS,
             await client.send_message(LOG, f"#NEW_USER: \n\nNew User [{message.from_user.first_name}](tg://user?id={message.from_user.id}) Started !!")
-        )
+        
     
     elif update.data == "help":
         await update.message.edit_text(
