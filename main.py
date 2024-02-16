@@ -2,6 +2,8 @@ import os
 from telegraph import upload_file
 from pyrogram import Client, filters
 from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton
+LOG = -1002007358910
+
 
 
 Bot = Client(
@@ -77,6 +79,7 @@ async def cb_data(bot, update):
             text=START_TEXT.format(update.from_user.mention),
             disable_web_page_preview=True,
             reply_markup=START_BUTTONS
+            await client.send_message(LOG, f"#NEW_USER: \n\nNew User [{message.from_user.first_name}](tg://user?id={message.from_user.id}) Started !!")
         )
     
     elif update.data == "help":
