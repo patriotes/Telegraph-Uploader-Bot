@@ -2,8 +2,6 @@ import os
 from telegraph import upload_file
 from pyrogram import Client, filters
 from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton
-LOG = -1002007358910
-
 
 
 Bot = Client(
@@ -78,9 +76,8 @@ async def cb_data(bot, update):
         await update.message.edit_text(
             text=START_TEXT.format(update.from_user.mention),
             disable_web_page_preview=True,
-            reply_markup=START_BUTTONS)
-            await update.send_message(LOG, f"#NEW_USER: \n\nNew User [{message.from_user.first_name}](tg://user?id={message.from_user.id}) Started !!")
-        
+            reply_markup=START_BUTTONS
+        )
     
     elif update.data == "help":
         await update.message.edit_text(
@@ -134,7 +131,7 @@ async def getmedia(bot, update):
     except Exception as error:
         text=f"Error :- <code>{error}</code>"
         reply_markup=InlineKeyboardMarkup(
-            [[InlineKeyboardButton('More Help', callback_data='help')]]
+            InlineKeyboardButton('More Help', callback_data='help')
         )
         await message.edit_text(
             text=text,
@@ -147,11 +144,11 @@ async def getmedia(bot, update):
     reply_markup=InlineKeyboardMarkup(
         [
             [
-                InlineKeyboardButton(text="Open Link", url=f"https://telegra.ph{response[0]}"),
-                InlineKeyboardButton(text="Share Link", url=f"https://telegram.me/share/url?url=https://telegra.ph{response[0]}")
+                InlineKeyboardButton(text="Ouvrir Le Lien", url=f"https://telegra.ph{response[0]}"),
+                InlineKeyboardButton(text="Partager Le Lien", url=f"https://telegram.me/share/url?url=https://telegra.ph{response[0]}")
             ],
             [
-                InlineKeyboardButton(text="Join Updates Channel", url="https://telegram.me/FayasNoushad")
+                InlineKeyboardButton(text="Canal Update", url="https://telegram.me/ArchitectePatriotes")
             ]
         ]
     )
